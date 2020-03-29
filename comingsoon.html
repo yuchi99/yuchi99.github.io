@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUCHI WANG</title>
+<link rel="stylesheet" href="assets/jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="assets/jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="assets/jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+		function init()
+		{
+			$(window).resize(resizeHandler);
+			$(window).triggerHandler("resize");
+		}
+		function resizeHandler(){
+			var winW=$(window).width();
+			var winH=$(window).height();
+			var divW=$("header").width();
+			var divH=$("header").height();
+			/*$(":text").val("W="+winW+" H="+winH);*/
+			$("header").offset({left:(winW-divW)/2,top:(winH-divH)/2});
+		}
+/*--------------------------------------------------------------------------------------*/
+</script>
+<style>
+	body{margin:0 auto; background-color:#515151;}
+	p, span{margin:0px; font-family:"MyFont", "微軟正黑體";}
+	@font-face{
+		font-family:"MyFont";
+    	src: url(assets/font/Gravity-Book.otf);
+	}
+	@font-face{
+		font-family:"MyFontBB";
+    	src: url(assets/font/Gravity-Bold.otf);
+	}
+	@font-face{
+		font-family:"MyFontLL";
+    	src: url(assets/font/Gravity-Light.otf);
+	}
+	.flaName{
+		width: 1200px;
+		height:780px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.txt{
+		position: absolute;
+		margin: -285px 0px 0px 755px;
+	}
+	.txt a{
+		color: #8d8576;
+		text-decoration: none;
+	}
+	.txt a:hover{
+		color: #00ffB6;
+	}
+	.line{
+		height: 1px;
+		width: 187px;
+		overflow: hidden;
+        position: fixed;
+		margin: 10px 0px 0px -200px;
+
+	}
+	.line::before{
+		content: "";
+    	position: absolute;
+		height: 1px;
+    	width: 187px;
+    	background: #8d8576;
+		animation: mymove 2s infinite 0.5s;
+	}
+	@-webkit-keyframes mymove {
+    from {left: -187px;}
+    to {left: 187px;}
+}
+/*--------------------------------------------------------------------------------------*/
+</style>
+</head>
+
+<body>
+<div class="all">
+	<header>
+		<section class="flaName"><img src="images/comingSoon.jpg">
+			<section class="txt">
+			<section class="line"></section>
+			<span><a href="index.html">回主頁</a></span>
+			</section>
+		</section>
+	</header>
+<!----------------------------------------------------------------------------------------------->
+
+</div>
+
+</body>
+</html>

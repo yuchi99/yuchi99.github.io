@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SUBSCRIPTION</title>
+<link rel="stylesheet" href="assets/jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="assets/jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="assets/jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+		function init(){
+		$(window).resize(resizeHandler);
+		$(window).triggerHandler("resize");		
+		$(".myPic").click(clickHandler);
+		//$(".closeBtn").click(hideHandler);
+		$(".picShow").click(hideHandler);
+		resizeHandler();
+	}
+	function resizeHandler(){
+		var winW=$(window).width();
+		var winH=$(window).height();
+		$(".picShow").width(winW);
+		$(".picShow").height(winH);
+		//$(".picShow").offset({left:(winW-divW)/2,top:(winH-divH)/2});
+		//$(".picShow").offset({left:0,top:0});
+		//$(".picShow").hide(0);
+		}
+	function clickHandler(){
+		var image=$(this).attr("src");
+		$(".picShow").css({"background-color":"rgba(0,0,0,0.7)","background-image":"url("+image+")","background-repeat":"no-repeat","background-position":"center center","background-size":"content"});
+		$(".picShow").fadeIn(500);
+		console.log(image);
+	}
+	function hideHandler(e){
+		$(".picShow").fadeOut(500);
+		e.stopPropagation();
+	}
+	/*function showHandler(){
+		$(".picShow").show("fade",500);
+		$(".picShow").append("<img src='images/general_graphic/graphic_01.jpg'>");
+	}*/
+</script>
+<style>
+	body{margin:0; background-color:#515151;}
+	p, h {margin:0px; padding: 0px; font-family: "MyFont, 微軟正黑體";}
+	@font-face{
+		font-family:"MyFont";
+    	src: url(assets/font/Gravity-Book.otf);
+	}
+	@font-face{
+		font-family:"MyFontBB";
+    	src: url(assets/font/Gravity-Bold.otf);
+	}
+	@font-face{
+		font-family:"MyFontLL";
+    	src: url(assets/font/Gravity-Light.otf);
+	}
+	all{
+		width: 100%;
+	}
+	header{
+		width: 1200px;
+		margin: 100px auto 0px auto;
+	}
+	.logo{
+		margin: 0px auto 30px auto;
+		text-align: center;
+	}
+	.logo img:hover{
+		opacity: 0.7;
+	}
+	nav{
+		width: 1200px;
+	}
+	nav ul{
+		width: 1100px;
+		margin: 0px auto;
+	}
+	nav ul li{
+		border-top: 1px solid rgba(255,255,255,0.00);
+		list-style-type: none;
+		margin: 15px 15px;
+		float: left;
+	}
+	nav ul li a{
+		text-decoration: none;
+		color: #00ffB6;  /*主要亮綠*/
+		font-family: "MyFont", "Gill Sans", "Gill Sans MT", Helvetica, Arial;
+		letter-spacing: 1px;
+		display: inline-block;
+		line-height: 30px;
+	}
+	nav ul li:nth-child(-1n+3) a::before, nav ul li:nth-child(1n+5) a::before{
+		content: '';
+    	display: block;
+    	width: 0;
+    	height: 1px;
+    	background: #8d8576;
+    	transition: width .3s;
+	}
+	nav ul li:nth-child(-1n+3) a:hover::before, nav ul li:nth-child(1n+5) a:hover::before{
+		width: 100%;
+    	transition: width .3s;
+	}
+	nav ul li a:hover{
+		color: #8d8576;
+	}
+	.active{
+		color: #8d8576;
+	}
+	/*----------------------------------------------------------------------*/
+	.main{
+		width: 1200px;
+		height: 3400px;/*!!!!!!!!!!!!!!!!!!!!!!!!*/
+		margin: 0px auto;
+		padding: 20px;
+		border: 1px solid #00ffB6;
+		clear: both;
+		position: relative;
+	}
+	.main_left, .main_center, .main_right{width:383px; margin: 0px; float: left; position: absolute;}
+	.myPic:hover{opacity: 0.4;}
+	.myPic{
+		width: 100%;
+		border: 1px solid #00ffB6;
+		margin-bottom: 5px;
+		/*float: left;*/
+	}
+	.main_center{
+		margin-left: 405px;
+	}
+	.main_right{
+		margin-left: 810px;
+	}
+	/*----------------------------------------------------------------------*/
+	footer{
+		white-space: pre;
+		width: 1200px;
+		margin:30px auto 80px auto;
+		text-align: center;
+		color: #8d8576;   /*灰咖色*/
+	}
+	/*-----------------------------------------------------------------------*/
+	.picShow{
+		width: 1200px;
+		height:900px;
+		/*border: 5px solid #00ffB6;*/
+		position: fixed;
+		z-index: 51;
+		display: none;
+		top: 0px;
+		left: 0px;
+	}
+	.closeBtn{
+		width:30px;
+		height:30px;
+		position: absolute;
+		margin: -15px 0px 0px 590px;
+	}
+	</style>
+</head>
+
+<body>
+<div class="all">
+	<header>
+		<section class="logo"><a href="index.html"><img src="images/logo.png"></a></section>
+		<nav>
+			<ul>
+				<li><a href="general_webApp_design.html">WEB&APP</a></li>
+				<li><a href="general_web.html">WEB Coding</a></li>
+				<li><a href="general_banner_edm.html">BANNER & EDM</a></li>
+				<li><a href="general_graphic.html">GRAPHIC</a></li>
+				<li><a class="active" href="general_sub.html">SUBSCRIPTION</a></li>
+				<li><a href="general_package.html">PACKAGE</a></li>
+				<li><a href="general_layout.html">LAYOUT</a></li>
+				<li><a href="general_gif.html">GIF</a></li>
+				<li><a href="general_about.html">ABOUT</a></li>
+			</ul>
+		</nav>
+	</header>
+<!---------------------------------------------------------------------------------------------->	
+	<section class="main">
+		<section class="main_left">
+			<section><img src="images/general_sub/sub_01.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_05.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_06.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_08.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_10.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_13.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_16.jpg" class="myPic"></section>
+		</section>
+		<!----------------------------------------------------------------------->
+		<section class="main_center">
+			<section><img src="images/general_sub/sub_03.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_05_2.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_06_2.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_08_2.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_11.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_14.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_17.jpg" class="myPic"></section>
+		</section>
+		<!----------------------------------------------------------------------->
+		<section class="main_right">
+			<section><img src="images/general_sub/sub_02.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_04.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_07.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_09.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_12.jpg" class="myPic"></section>
+			<section><img src="images/general_sub/sub_15.jpg" class="myPic"></section>
+		</section>
+	</section>
+<!---------------------------------------------------------------------------------------------->	
+	<footer>http://www.yuchiwangtw.byethost6.com  ／  E-mail: cheesetw2016@gmail.com  ／  Cell Phone: 0928-513-300</footer>
+<!---------------------------------------------------------------------------------------------->	
+	
+		<section class="picShow">
+			<!--section class="closeBtn"><img src="images/close.png"></section-->
+        </section> 
+	
+	
+	
+</div>
+
+
+</body>
+</html>

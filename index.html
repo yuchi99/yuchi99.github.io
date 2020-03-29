@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YUCHI WANG</title>
+<link rel="stylesheet" href="assets/jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="assets/jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="assets/jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+		function init()
+		{
+			$(window).resize(resizeHandler);
+			$(window).triggerHandler("resize");
+		}
+		function resizeHandler(){
+			var winW=$(window).width();
+			var winH=$(window).height();
+			var divW=$("header").width();
+			var divH=$("header").height();
+			/*$(":text").val("W="+winW+" H="+winH);*/
+			$("header").offset({left:(winW-divW)/2,top:(winH-divH)/2});
+		}
+/*--------------------------------------------------------------------------------------*/
+</script>
+<style>
+	body{margin:0 auto; background-color:#515151;}
+	p{margin:0px; font-family: "微軟正黑體";}
+	@font-face{
+		font-family:"MyFont";
+    	src: url(assets/font/Gravity-Book.otf);
+	}
+	@font-face{
+		font-family:"MyFontBB";
+    	src: url(assets/font/Gravity-Bold.otf);
+	}
+	@font-face{
+		font-family:"MyFontLL";
+    	src: url(assets/font/Gravity-Light.otf);
+	}
+	.all{
+		width: 100%;
+	}
+	.flaName{
+		width: 600px;
+		height:130px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.indexText{
+		position: absolute;
+	}
+	.indexText ul{
+		margin: 0px 0px 0px 340px;
+		width: 281px;
+		height: 50px;
+	}
+	.indexText ul li{
+		list-style-type: none;
+		float: left;
+		padding: 0px 20px;
+	}
+	.indexText ul li:first-child{
+		border-right:1px solid #00ffB6;
+	}
+
+	.indexText ul li a{
+		color: #00ffB6; /*主要亮綠*/
+		font-size: 0.9em;
+		text-decoration: none;
+		font-family: MyFont;
+	}
+	
+/*--------------------------------------------------------------------------------------*/
+</style>
+</head>
+
+<body>
+<div class="all">
+	<header>
+	<section class="flaName"><iframe src="assets/logo_run.html" width="600" height="130" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+		<section class="indexText">
+			<ul>
+				<li><a href="general_webApp_design.html">GENERAL</a></li>
+				<li><a href="rwd_index.html">RWD</a></li>
+			</ul>
+		</section>
+	</section>
+	</header>
+<!----------------------------------------------------------------------------------------------->
+
+</div>
+
+</body>
+</html>

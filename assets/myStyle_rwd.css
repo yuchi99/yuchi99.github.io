@@ -1,0 +1,169 @@
+@charset "utf-8";
+@font-face{
+	font-family:"MyFont";
+	src: url(../font/Gravity-Book.otf);
+}
+@font-face{
+	font-family:"MyFontBB";
+	src: url(../font/Gravity-Bold.otf);
+}
+@font-face{
+	font-family:"MyFontLL";
+	src: url(../font/Gravity-Light.otf);
+}
+body, html {
+	font-family: "MyFont", "微軟正黑體";
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	color: #3a3a3a;
+}
+.wrapper{
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--slate-15);
+}
+h1, h2, h3, h4, h5{
+	margin: 0px;
+	padding: 0px;
+	color: #8D8576;
+}
+section{
+	padding: 60px 0;
+}
+.logoRun{
+	position: absolute;
+	width: 600px;
+	top: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.bg-light{
+	background-color: #fff !important;
+	opacity: 1;
+	z-index: 999;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-light .navbar-toggler{
+	opacity: 1;
+	background-color: #fff !important;
+	color: #8D8576;
+}
+.page0_bg{
+	position: relative;
+	top: 45px;
+}
+.page0_bg img{
+	width: 100%;
+	opacity: 0.7;
+	animation-delay: 0s;
+	animation-name: example;
+	animation-duration: 5s;
+}
+@keyframes example {
+	0%   {opacity: 0;}
+	100% {opacity: 0.7;}
+	}
+.navbar{
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+}
+button:focus{
+	outline: 0px;
+}
+.about-icon img{
+	width: 80px;
+}
+.webApp-design{
+	background-color:rgba(141,133,118,0.1);
+}
+.webApp-item{
+	width: 100%;
+	border: 1px solid #cccccc;
+}
+.webApp-item img{
+	width: 100%;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------*/
+
+/*---------------------------------------------------------------*/
+footer{
+	line-height: 50px;
+	background-color: #8D8576;;
+	color: #fff;
+}
+/*---------------------------------------------------------------*/
+
+.pageTop{
+		position: fixed;
+		right: 20px;
+    	bottom: 40px;
+		-webkit-writing-mode: vertical-rl;
+    	writing-mode: vertical-rl;
+		font-size:0.9em;
+		font-weight: 800;
+		letter-spacing: 1.3px;
+		z-index: 1000;
+		padding-top: 60px;
+		}
+	.topLine{
+    	position: absolute;
+		height: 50px;
+    	width: 2px;
+    	background: #C4C4C4;
+		animation: mymove 1.7s infinite 0.2s;
+		animation-timing-function:ease-out;
+	}
+	.topLine_hidden{                          /*線向上跑*/
+		margin: -60px 0px 0px 0px;
+		right: 11px;
+		height: 50px;
+		width: 2px;
+        position: relative;
+		overflow: hidden; 
+	}
+		@keyframes mymove {
+    	from {top: 100px;}
+    	to {top: -50px;}
+	}
+	.pageTop a{
+		text-decoration: none;
+		color: #C4C4C4;
+		display: block;
+	}
+
+/*---------------------------------------------------------------*/
+	@media (max-width: 768px){
+		section{
+			padding: 40px 0;
+		}
+		.logoRun{
+			width: 400px;
+			top: 70px;
+		}
+
+}
+
+@media (max-width: 576px){
+	section{
+		padding: 40px 0;
+	}
+	.logoRu{
+		width: 240px;
+		top: 30px;
+	}
+
+}
