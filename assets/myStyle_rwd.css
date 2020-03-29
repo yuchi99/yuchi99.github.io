@@ -40,13 +40,6 @@ h1, h2, h3, h4, h5{
 section{
 	padding: 60px 0;
 }
-.logoRun{
-	position: absolute;
-	width: 600px;
-	top: 110px;
-	left: 50%;
-	transform: translateX(-50%);
-}
 .bg-light{
 	background-color: #fff !important;
 	opacity: 1;
@@ -61,9 +54,23 @@ section{
 .page0_bg{
 	position: relative;
 	top: 45px;
+	overflow: hidden;
+}
+.logoRun img{
+	position: absolute;
+	width: 600px;
+	top: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.headerBg{
+	display: flex;
+	justify-content: center;
+}
+.headerBg img{
+	width: 100%;
 }
 .page0_bg img{
-	width: 100%;
 	opacity: 0.7;
 	animation-delay: 0s;
 	animation-name: example;
@@ -150,20 +157,24 @@ footer{
 		section{
 			padding: 40px 0;
 		}
-		.logoRun{
+		.logoRun img{
 			width: 400px;
 			top: 70px;
+			
 		}
 
 }
 
 @media (max-width: 576px){
+	.headerBg img{
+		width: 150%;
+	}
 	section{
 		padding: 40px 0;
 	}
-	.logoRu{
+	.logoRun img{
 		width: 240px;
-		top: 30px;
+		top: 40px;
 	}
 
 }
