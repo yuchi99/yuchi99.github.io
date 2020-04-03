@@ -19,8 +19,8 @@
 	function resizeHandler(){
 		var winW=$(window).width();
 		var winH=$(window).height();
-		$(".picShow").width(winW);
-		$(".picShow").height(winH);
+		// $(".picShow").width(winW);
+		// $(".picShow").height(winH);
 		//$(".picShow").offset({left:(winW-divW)/2,top:(winH-divH)/2});
 		//$(".picShow").offset({left:0,top:0});
 		//$(".picShow").hide(0);
@@ -142,8 +142,8 @@
 	}
 	/*-----------------------------------------------------------------------*/
 	.picShow{
-		width: 1200px;
-		height:900px;
+		width: 100%;
+		height: 100%;
 		/*border: 5px solid #00ffB6;*/
 		position: fixed;
 		z-index: 51;

@@ -19,14 +19,14 @@
 	function resizeHandler(){
 		var winW=$(window).width();
 		var winH=$(window).height();
-		// $(".picShow").width(winW);
-		// $(".picShow").height(winH);
+		/* $(".picShow").width(winW);
+		$(".picShow").height(winH); */
 		//$(".picShow").offset({left:(winW-divW)/2,top:(winH-divH)/2});
 		}
 	function clickHandler(){
 		var image=$(this).attr("src");
-		$(".picShow").css({"background-color":"rgba(0,0,0,0.7)","background-image":"url("+image+")","background-repeat":"no-repeat","background-position":"center center","background-size":"content"});
-		$(".picShow").fadeIn(500);
+			$(".picShow").css({"background-color":"rgba(0,0,0,0.7)","background-image":"url("+image+")","background-repeat":"no-repeat","background-position":"center center","background-size":"content"});
+			$(".picShow").fadeIn(500);
 		console.log(image);
 	}
 	function hideHandler(e){
