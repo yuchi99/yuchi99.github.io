@@ -1,0 +1,299 @@
+body, p, h2, h1, h3,ul, span{margin: 0px; letter-spacing: 1px;}
+header{
+    height: 60px;
+    background-color: #fff;
+    justify-content: space-between;
+    display: flex;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+   }
+.logo{
+    font-size: 1.2em;
+    line-height: 60px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+.menu ul{
+    display: flex;
+    margin-right: 20px;
+}
+.menu ul li{
+    list-style-type: none;
+    padding: 0px 10px;
+}    
+.menu ul li a{
+    text-decoration: none;
+    line-height: 60px;
+    letter-spacing: 2px;
+    color: #000;
+}    
+.BigPic{
+    width: 100%;
+    height: 500px;
+    margin: 0px auto;
+    background: url(../images/header.jpg)  no-repeat center center;
+    background-size: cover; 
+    position: relative;
+    top: 60px;
+}
+.showMenu{
+    display: none;
+}
+/*----------------------------------------*/
+.about{
+    width: 1000px;
+    margin: 0px auto;
+    padding-top: 60px;
+}
+.about img{
+    width: 400px;
+    float: left;
+    margin-right: 80px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+
+}
+.about h1{
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 160px;
+}
+.about p{
+    text-align: left;
+    line-height: 1.5em;
+    padding-top: 15px;
+}
+.about p:first-of-type{
+    text-align: center;
+    padding-top: 30px;
+}
+.about p:last-child{
+    color: #888787;
+}
+hr{
+    width: 1000px;
+    opacity: 0.5;
+    margin: 0px auto;
+}
+/*-----------------------------------------*/
+.ourMenu{
+    width: 1000px;
+    margin: 100px auto;
+}
+.ourMenu img{
+    width: 400px;
+    float: right;
+    margin-left: 80px;
+    margin-bottom: 100px;
+}
+.ourMenu h1{
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 70px;
+}
+.ourMenu h3{
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 2em;
+    padding-top: 15px;
+}
+.ourMenu p{
+    text-align: left;
+    line-height: 1.5em;
+    color: #888787;
+}
+.button{
+    padding: 10px;
+    margin-top: 20px; 
+}
+/*-----------------------------------------*/
+.contact{
+    width: 1000px;
+    margin: 80px auto;
+}
+.contact h1{
+    font-size: 2.5em;
+    text-align: center;
+}
+.contact p{
+    line-height: 1.5em;
+    text-align: justify;
+}
+.contact p:first-of-type{
+    padding-top: 20px;
+}
+.specialP{
+    color: #a3a3a3; 
+    font-weight: 800;
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+.input{
+    width: 990px;
+    margin-top: 10px;
+    padding: 25px 0px 10px 10px;
+    border: 0px; 
+    border-bottom: 1px solid #888787;
+}
+/*-----------------------------------------*/
+footer{
+    height: 60px;
+    background-color: #d0d0d0;
+    text-align: center;
+    line-height: 60px;
+    font-size: 0.8em;
+}
+/*-----------------------------------------*/
+@media (min-width: 769px)and (max-width: 1200px){
+    .about, .ourMenu, .contact{
+        width: 80%;
+        margin: 80px auto;
+    }
+     hr{
+        width: 80%;
+}
+    .about h1, .ourMenu h1, .contact h1{
+        font-size: 2em;
+        padding-top: 0px;
+    }
+    .about img{
+        width: 350px;
+        margin-right: 50px;
+        padding-top: 0px;
+}
+    .about p{
+        line-height: 1.4em;
+        padding-top: 10px;
+        font-size: 0.9em;
+}
+    .about p:first-of-type{
+        padding-top: 20px;
+}
+    .ourMenu img{
+        width: 350px;
+        margin-left: 50px;
+}
+    .input{
+        width: 98%;
+    }
+}
+/*-----------------------------------------*/
+@media (max-width: 768px){
+    .showMenu{
+        display: block;
+    }
+    .showMenu ul{
+        display: none;
+        transition: max-height 3s;
+        position: absolute;
+        z-index: 100;
+        /*header 60px*/
+        top: 60px; 
+        left: 0;  
+        right: 0;
+        background: #000;
+        padding: 5px 0px;
+    }
+    .showMenu ul li{
+        width: 50px;
+        margin: 10px auto;
+        list-style-type: none;
+        text-align: center;
+        padding: 5px 0px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+    .showMenu ul li a::after {
+      position: absolute;
+      -webkit-transition: .3s;
+      transition: .3s;
+      content: '';
+      width: 0;
+      left: 50%;
+      bottom: 0;
+      height: 1px;
+      background: #fff;
+    }
+    .showMenu ul li a{
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+     }
+    .showMenu ul li a:hover {
+      cursor: pointer;
+    }
+    .showMenu ul li a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    .menuIconBtn{
+        cursor:pointer;
+        display:inline-block;
+        margin-top: 22px;
+        margin-right: 20px;
+    }
+    .menuIconBtn::after{
+        display: block;
+        content: '';
+        height: 4px;
+        width: 25px;
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+    }
+    .menuIconBtn::before{
+        display: block;
+        content: '';
+        height: 4px;
+        width: 25px;
+        border-top: 3px solid #000;
+    }
+    .menu{
+        display: none;
+    } 
+    .BigPic{
+        height: 350px;
+        background: url(../images/header_s.jpg) no-repeat center center;
+        background-size: cover; 
+    } 
+    .about, .ourMenu, .contact{
+        width: 80%;
+        margin: 80px auto 80px auto;
+    }
+    .about img, .ourMenu img{
+        width: 100%;
+        float: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+    }
+    .about h1, .ourMenu h1, .contact h1{
+        font-size: 2em;
+        padding: 0px;
+        padding-top: 60px;
+}
+    hr{
+        width: 80%;
+}
+    .about p{
+        line-height: 1.4em;
+        padding-top: 10px;
+        font-size: 0.9em
+}
+    .ourMenu p{
+        line-height: 1.4em;
+        font-size: 0.9em
+}
+     .input{
+        width: 98%;
+    }
+    .contact p{
+        text-align: left;
+    }
+}
+/*-----------------------------------------*/

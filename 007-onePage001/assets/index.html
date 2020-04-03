@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>傑亮資訊有限公司 JetFusion Co.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="傑亮資訊有限公司為一群熱愛程式設計領域並樂於解決客戶問題的專業人士所組成, 我們熟悉各式各樣的企業端應用, 也重視使用者經驗。只有認真傾聽, 專注關鍵流程, 開發對客戶有價值的軟體才能真正為企業提出貢獻"/>
+  <meta name="keywords" content="系統開發, 軟體開發, 網站開發, 人力資源"/>
+
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/fontawesome-all.css"" type="text/css">
+  <!-- Font Animation -->
+  <link rel="stylesheet" href="css/animations.css" type="text/css">
+
+  <link rel="stylesheet" href="css/ev_main.css" type="text/css">
+  <link rel="stylesheet" href="css/anlines.css" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/parallax.js"></script>
+
+  <script type="text/javascript">
+      $(document).ready(init);
+        function init(){
+              $("#collapsibleNavbar ul").click(clickHandler);
+          }
+
+
+    $(function(){
+
+      $(".subNav").click(function(){
+        var $this = $(this);
+        $this.toggleClass("currentDd").toggleClass("currentDt");;
+        $this.parent().siblings().find(".subNav");
+        // $this.parent().siblings().find(".subNav").removeClass("currentDd").removeClass("currentDt");
+
+        $this.next(".navContent").slideToggle(500);
+        // $this.parent().siblings().find(".navContent").slideUp(500);
+        // $this.parent().siblings().find(".subNav-2").removeClass("currentDd-2 currentDt-2");
+
+        // $this.next().find(".subNav-2").removeClass("currentDd-2 currentDt-2");
+
+      })
+      // $(".subNav-2").click(function(){
+      //    var $this = $(this);
+      //    $this.toggleClass("currentDd-2").siblings(".subNav-2").removeClass("currentDd-2");
+      //    $this.toggleClass("currentDt-2").siblings(".subNav-2").removeClass("currentDt-2");
+      //  })
+    })
+
+      function clickHandler(){
+         $("#collapsibleNavbar").removeClass('show');
+    }
+    
+  </script>
+
+</head>
+<body>
+  <!-- Return to Top -->
+  <a href="#0" class="cd-top">Top</a>
+
+  <!-- NAV Bar -->
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top bottom-shadow">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="#"><img src="img/JF-logo.svg" width="190" height="63" alt=""></a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item page-scroll"><a class="nav-link" href="#link1">關於傑亮</a></li>
+        <li class="nav-item page-scroll"><a class="nav-link" href="#link2">服務項目</a></li>
+        <li class="nav-item page-scroll"><a class="nav-link" href="#processjf-out">服務流程</a></li> 
+        <li class="nav-item page-scroll"><a class="nav-link" href="#link-job">徵才訊息</a></li>
+        <li class="nav-item page-scroll"><a class="nav-link" href="#link-contact">聯絡我們</a></li>
+      </ul>
+    </div> 
+  </nav>
+
+  <main id="contentwrap" class="swap">
+
+    <!--MAIN PHOTO-->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/main_p2.jpg">
+      <div class="animatedParent animateOnce">
+        <div class="animated fadeInDownShort" style=" position: absolute; left: 48%; top: 345px; width: 25%;">
+          <img src="img/slogan-key.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+
+    <article id="content">
+      <!--ABOUT US-->
+      <section id="link1">
+        <div class="container aboutjf animatedParent animateOnce">
+          <div class="row">
+            <!--LINES SET-->
+            <div class="event-inner">
+              <div class="line line-v animated growTopToBottom"></div>
+              <div class="line line-dia-v-r-d animated growTopToLeft delay-1250"></div>
+            </div><!--end of LINES SET-->
+
+            <div class="col-md-6 col-xs-6 animated bounceIn">
+              <img src="img/aboutus.png" class="img-responsive">
+            </div>
+            <div class="col-md-6 col-xs-6 animated fadeInDownShort">
+              <div class="detail-inner-r">
+                <h2>ABOUT US</h2>
+                <h3>關於傑亮</h3>
+                <p>傑亮資訊團隊是一群專業且高熱忱的資訊技術夥伴。我們提供高彈性、即時且專業之軟體開發與系統建置，同時透過開放性且積極有效率的客戶訪談，來引導出不同層面的能量資源，提供企業更完整的資訊系統解決方案。
+                我們，在不斷進步創新的資訊潮流中，隨時保持前進的動力。並且提供最好的服務，為客戶達到成功標的、聚焦企業價值所在。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--SERVICE-->
+      <section id="link2">
+        <div class="container servicejf animatedParent animateOnce">
+          <div class="row flex-row-reverse">
+
+            <!--LINES SET-->
+            <div class="event-inner">
+              <div class="line line-h-l animated growTopToBottom delay-1250"></div>
+            </div><!--end of LINES SET-->
+
+            <div class="col-md-6 col-xs-6 animated bounceIn">
+              <img src="img/services.png" class="img-responsive">
+            </div>
+            <div class="col-md-6 col-xs-6 animated fadeInDownShort">
+              <div class="detail-inner-l">
+                <h2>SERVICE</h2>
+                <h3>服務項目</h3>
+                <p>技術強項 //  原生iOS, Android, 跨平台App開發 - Xamarin、 Java/JavaEE、Microsoft .NET、 Oracle、Redhat、IBM 相關技術與解決方案，並熟悉各式 Open Source 軟體 (如 Spring, Struts, Hibernate 等。</p>
+                <p>設計服務// 使用者經驗優化設計、介面設計、響應式網頁設計、CIS企業識別視覺設計。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--PROCESS-->
+      <section id="processjf-out">
+        <div class="container processjf animatedParent animateOnce">
+          <div class="row">
+
+            <!--LINES SET-->
+            <div class="event-inner">
+              <div class="line line-dia-v-l-d animated growTopToRight delay-1000"></div>
+              <div class="line line-dia-v-t-l animated growLeftToDotm delay-1500"></div>
+            </div> <!--end of LINES SET-->
+
+            <div class="col-md-6 col-xs-6 animated bounceIn delay-750">
+              <img src="img/process.png" class="img-responsive">
+            </div>
+            <div class="col-md-6 col-xs-6 animated fadeInDownShort">
+              <div class="detail-inner-r">
+                <h2>PROCESS</h2>
+                <h3>服務流程</h3>
+                <p>2007年開始，傑亮資訊不斷精、著墨於企業資訊軟體之開發與人力技術支援服務的層面。我們擅長行動開發，以優異的軟體工程與最新的技術實力，搭配優質的服務熱誠，為台灣各大金控集團、壽險公司與電信公司等上市櫃大型客戶提供專業服務，至今已累積穩定的客群並獲得良好評價。</p>
+              </div>
+              <div class="line-sh"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--SCRUM PROCESS-->
+      <section id="scrumjf-out">
+        <div class="container scrumjf animatedParent animateOnce">
+          <div class="row">
+
+            <!--LINES SET-->
+            <div class="event-inner">
+              <div class="line line-h-l animated fadeIn delay-1750"></div>
+            </div> <!--end of LINES SET-->
+
+
+            <div class="col-md-6 col-xs-6 animated bounceInUp">
+              <img src="img/scrum.png" class="img-responsive">
+            </div>
+            <div class="col-md-6 col-xs-6 scrumjf animated fadeInDownShort">
+              <div class="scrum-ti">
+                <h2>SCRUM PROCESS</h2>
+                <h3>敏捷流程</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--JOBS-->
+      <section id="link4">
+        <div class="container jobspo animatedParent animateOnce">
+
+          <div class="row">
+
+            <!--LINES SET-->
+            <div class="event-inner animated fadeIn">
+              <div class="line line-v-s"></div>
+              <div class="line line-h-s-l"></div>
+              <div class="line line-h-s-r"></div>
+            </div><!--end of LINES SET-->
+
+            <div class="col-sm-12 jobspo animated bounceInUp delay-750">
+              <div class="jobspo-ti">
+                <h2>JOB POSITIONS</h2>
+                <h3>徵才訊息</h3>
+                <p id="link-job">公司沒有過多僵化的窠臼，傑亮提供一個供盡情揮灑的舞台，端看自己如何表演，日後各利潤中心事業處的角色，你想扮演哪一個？？ </p>
+                <div class="jobspo-btn">
+                  <a href="https://goo.gl/6ExARD" target="_blank">
+                    <img src="img/btn-resume.png" width="150" height="47">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="jobspo-inner">
+              <!--HR-->
+              <!--JOB 1-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>Senior Java Developer（台北）</p>
+                  </div>
+                </div>
+
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>大專以上，具備3年以上Java開發經驗者 </li>
+                      <li>熟悉JAVA open source projects/framework(Ex.Hibernate, Spring, JBoss) </li>
+                      <li>熟悉關聯式資料庫 </li>
+                      <li>良好的溝通、團隊合作、獨立作業的能力 </li>
+                      <li>可接觸大型分散式系統架構之設計與開發</li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體設計工程師、Internet程式設計師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班，09:00~18:00</dd>
+                      <dt>休假制度：</dt><dd>周休二日</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>1至5人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族、應屆畢業生原住民</dd>
+                      <dt>工作經歷：</dt><dd>不拘</dd>
+                      <dt>學歷要求：</dt><dd>專科、大學、碩士</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>英文 -- 聽 /略懂、說 /略懂、讀 /略懂、寫 /略懂</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+
+              <!--JOB 2-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>ASP.NET，C# Developer（台北）</p>
+                  </div>
+                </div>
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>具1年以上.NET、C#實務開發經驗</li>
+                      <li>具MVC、Webform實務開發經驗 </li>
+                      <li>良好的溝通、團隊合作、獨立作業的能力 </li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體設計工程師、Internet程式設計師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班，09:00~18:00</dd>
+                      <dt>休假制度：</dt><dd>周休二日</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>1至5人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族、應屆畢業生、原住民</dd>
+                      <dt>工作經歷：</dt><dd>不拘</dd>
+                      <dt>學歷要求：</dt><dd>專科、大學、碩士</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>英文 -- 聽 /略懂、說 /略懂、讀 /略懂、寫 /略懂</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+
+              <!--JOB 3-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>Java Developer（台北）</p>
+                  </div>
+                </div>
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>大專以上，具備3年以上Java開發經驗者 </li>
+                      <li>熟悉常用framework,如Spring, Hibernate </li>
+                      <li>熱愛程式開發,具責任感,能團隊合作</li>
+                      <li>可學習大型分散式系統架構設計與開發</li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體設計工程師、軟體專案主管、電腦系統分析師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班，09:00~18:00</dd>
+                      <dt>休假制度：</dt><dd>周休二日</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>1至5人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族、原住民</dd>
+                      <dt>工作經歷：</dt><dd>不拘</dd>
+                      <dt>學歷要求：</dt><dd>專科、大學、碩士</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>英文 -- 聽 /略懂、說 /略懂、讀 /略懂、寫 /略懂</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+
+              <!--JOB 4-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>Senior ASP.NET，C# Developer（台北）</p>
+                  </div>
+                </div>
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>具3年以上.NET、C#實務開發經驗</li>
+                      <li>具MVC、Webform實務開發經驗</li> 
+                      <li>良好的溝通、團隊合作、獨立作業的能力</li>
+                      <li>具備良好之溝通、團隊合作之能力</li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體設計工程師、Internet程式設計師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班，09:00~18:00</dd>
+                      <dt>休假制度：</dt><dd>周休二日</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>1至5人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族、原住民</dd>
+                      <dt>工作經歷：</dt><dd>不拘</dd>
+                      <dt>學歷要求：</dt><dd>專科、大學、碩士</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>英文 -- 聽 /略懂、說 /略懂、讀 /略懂、寫 /略懂</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+
+              <!--JOB 5-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>WEB 前端工程師（台北）</p>
+                  </div>
+                </div>
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>1. HTML、CSS、Javascript、JQuery Mobile </li>
+                      <li>CSS Framework：Bootstrap(RWD 經驗) 佳 </li>
+                      <li>有ReactJS開發經驗者 </li>
+                      <li>喜好團隊合作 </li>
+                      <li>有良好的溝通能力及態度</li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體設計工程師、Internet程式設計師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班</dd>
+                      <dt>休假制度：</dt><dd>周休二日</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>1至5人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族、應屆畢業生、原住民</dd>
+                      <dt>工作經歷：</dt><dd>不拘</dd>
+                      <dt>學歷要求：</dt><dd>專科以上</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>英文 -- 聽 /略懂、說 /略懂、讀 /略懂、寫 /略懂</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+
+              <!--JOB 6-->
+              <div class="subNavBox">
+                <div class="subNav">
+                  <div class="icon">
+                    <p>(薪優) 專案經理 / 系統分析師</p>
+                  </div>
+                </div>
+                <section class="navContent">
+                  <h4>工作內容</h4>
+                  <div class="job-info">
+                    <ol>
+                      <li>專案管理，帶領專案團隊如期如質完成專案</li>
+                      <li>與客戶進行需求訪談、需求規格制定、系統分析與系統測試等工作，並產出必要文件</li>
+                      <li>良好客戶關係維繫</li>
+                      <li>協助業務人員進行專案提案簡報</li>
+                      <li>有金融、壽險業經驗尤佳</li>
+                    </ol>
+                    <dl>
+                      <dt class="jtitle">職務類別：</dt><dd class="jtitle">軟體專案主管、電子商務技術主管、電腦系統分析師</dd>
+                      <dt>工作待遇：</dt><dd>面議</dd>
+                      <dt>工作性質：</dt><dd>全職</dd>
+                      <dt>上班地點：</dt><dd>台北市內湖區(依照公司規定分派-台北市全區)</dd>
+                      <dt>管理責任：</dt><dd>不需負擔管理責任</dd>
+                      <dt>出差外派：</dt><dd>需外派，一年累積時間未定</dd>
+                      <dt>上班時段：</dt><dd>日班</dd>
+                      <dt>休假制度：</dt><dd>依公司規定</dd>
+                      <dt>可上班日：</dt><dd>不限</dd>
+                      <dt>需求人數：</dt><dd>2至3人</dd>
+                    </dl>
+                  </div>
+
+                  <h4>條件需求</h4>
+                  <div class="job-info">
+                    <dl>
+                      <dt>接受身份：</dt><dd>上班族</dd>
+                      <dt>工作經歷：</dt><dd>3年以上</dd>
+                      <dt>學歷要求：</dt><dd>專科、大學、碩士</dd>
+                      <dt>科系要求：</dt><dd>不拘</dd>
+                      <dt>語文條件：</dt><dd>不拘</dd>
+                      <dt>擅長工具：</dt><dd>不拘</dd>
+                      <dt>工作技能：</dt><dd>不拘</dd>
+                    </dl>
+                  </div>
+
+                  <h4>公司福利</h4>
+                  <div class="job-info">
+                    <ul>
+                      <li>高額盈餘分紅制度<br>
+                        <ol>
+                          <li>任職滿一年後，每年可享公司盈餘分紅 </li>
+                          <li>分紅比例隨年資、績效（每月依個人表現評鑑）而增加 </li>
+                        </ol>
+                      </li>
+
+                      <li>公司每月定額提撥高額福利金，統一由福委專用於員工福利 <br>
+                        <ol>
+                          <li>生日禮金</li> 
+                          <li>健康檢查補助 </li>
+                          <li>員工旅遊補助 </li>
+                          <li>不定期節日活動 </li>
+                        </ol>
+                      </li>
+                      <li>每年舉辦國外員工旅遊（如遇上班日給予公假不扣薪，讓同仁可以輕鬆出國遊玩）</li> 
+                      <li>每年年底年度調薪 </li> 
+                      <li>考試津貼 </li> 
+                      <li>端午節、中秋節禮金</li> 
+                      <li>勞健保、意外險團保</li> 
+                      <li>不定期教育訓練</li>  
+                      <li>公司提供筆電，或自購電腦(主流規格)，可享公司分期補助</li>  
+                      <li>提供英文學習課程</li> 
+                      <li>聚餐</li> 
+                    </ul>
+                  </div>
+
+                  <h4>聯絡方式</h4>
+                  <div class="job-info">
+                    <dt>聯絡人：</dt><dd>鄭 小姐</dd>
+                    <dt>E-mail：</dt><dd>vivi.cheng@jetfusion.com.tw,matthew.liao@jetfusion.com.tw</dd>
+                    <dt>電洽：</dt><dd>02-25450905</dd>
+                  </div>
+                </section>
+              </div>
+              <!--HR END-->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="container tempb animatedParent animateOnce">
+        <div class="row">
+          <!--LINE SET-->
+          <div class="event-inner">
+            <div class="line line-v-l-s animated fadeIn delay-1250"></div>
+            <div class="line line-dia-v-r-d animated fadeIn delay-1250"></div>
+            <div class="line line-dia-v-l-t animated fadeIn delay-1250"></div>
+            <div class="line line-v-r-s animated fadeIn delay-1250"></div>
+          </div><!--end of LINES SET-->
+        </div>
+      </div>
+
+      <!--CONTACT US-->
+      <section id="con-outb">
+        <div class="container contact-box animatedParent animateOnce">
+          <div class="row">
+
+            <!--LINE SET-->
+            <div class="event-inner">
+              <div class="line line-h-s-l animated fadeIn"></div>
+              <div class="line line-h-s-r animated fadeIn"></div>
+              <div class="line line-v-l-s animated fadeIn delay-1250"></div>
+              <div class="line line-v animated fadeIn delay-1250"></div>
+              <div class="line line-h-d animated fadeIn delay-1250">Copyright © 2018 JetFusion Information Corporation. All Rights Reserved.</div>
+            </div><!--end of LINES SET-->
+
+
+            <div class="col-sm-12 contact-box">
+              <div class="contact-ti">
+                <h2>CONTACT US</h2>
+                <h3>聯絡我們</h3>
+                <p id="link-contact">傑亮資訊擁有一群專業且高熱忱的資訊技術夥伴，在不斷進步創新的資訊潮流中，隨時保持前進的動力並且為客戶提供最好的服務，創造企業價值。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row map-inner">
+            <div class="col-md-6 col-xs-6">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control mb-3" placeholder="聯絡人">
+                    <input type="text" class="form-control" placeholder="聯絡電話">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control mb-3" placeholder="電子信箱">
+                    <input type="text" class="form-control" placeholder="公司單位">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="初步合作方向"></textarea>
+                </div>
+                <div class="btnset">
+                  <button type="submit" class="btn btn-primary mb-2">送出表單</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-md-6 col-xs-6 contact-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.37486533345!2d121.5421545150066!3d25.055280583962436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe6e6cbbb4f%3A0x42fec31a3fda0aab!2zMTA15Y-w5YyX5biC5p2-5bGx5Y2A5b6p6IiI5YyX6LevMTkx6Jmf!5e0!3m2!1szh-TW!2stw!4v1472110360954" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="col-md-12 col-xs-12 copyright">
+              <div class="mobile-display">Copyright © 2018 JetFusion Information Corporation. All Rights Reserved.</div>
+            </div>
+            
+          </div>
+        </div>
+
+      </section>
+
+    </article>
+
+  </main>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(function(){
+      $('.parallax-window').parallax({imageSrc: 'img/main_p1.jpg'});
+    })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/css3-animate-it.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+
+
+</body>
+</html>
