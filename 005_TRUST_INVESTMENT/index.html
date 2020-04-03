@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>プロジェクト事業</title>
+<link href="jquery-ui-1.12.1.text/jquery-ui.css" rel="stylesheet">
+<script src="jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+	function init(){
+		$(".whiteText").delay(6000).fadeIn(1500);
+		  
+	for (var i=0; i<=6; i++){
+		$(".picChange").append("<img src='images/index_"+i+".jpg' />");
+		}
+	$(".picChange img:not(:first)").fadeOut(0);//將上面的照片全部fadeOut隱藏
+	}
+	
+	setInterval(nextHandler,6000);
+	var index=1;
+	function nextHandler(event){
+		if(index<8){
+			index++;
+		/*console.log(index);*/
+		}else{
+			index=2;
+		/*console.log(index);*/
+		}
+		$(".picChange img:eq(" +(index-1)+ ")").fadeIn(1500);
+		$(".picChange img:gt(" +(index-1)+ ")").fadeOut(1500);
+	}		
+/*----------------------------------------------------------------------*/	
+	
+	
+</script>
+<style>
+	body, p{margin: 0px;font-family: "微軟正黑體";}
+	.all{
+		width: 100%;
+	}
+	.allHeader{
+		
+	}
+	header{
+		width: 100%;
+		min-width: 1200px;
+		height: 100px;
+		background-color: white;
+		opacity:0.8;
+		position: fixed;
+		top:0px; 
+	}
+	.logo{
+		width: 200px;
+		margin: 35px 50px 20px 40px;
+		float: left;
+	}
+	nav ul{
+		height: 80px;
+	}
+	nav ul li{
+		list-style-type: none;
+		float: left;
+		padding: 20px 15px 10px 15px;
+	}
+	nav ul li a{
+		color: #000000;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9em;
+		line-height: 1.2em;
+	}
+	nav ul li:nth-child(1n+7){
+		float: right;
+	}
+	nav ul li:nth-child(7){
+		margin-right: 40px;
+		margin-top: 10px;
+	}
+	/*-------------------------------------------------------*/
+	.picOutter{
+		width: 100%;
+		height: 900px;
+		min-width: 1200px;
+		background:url(images/index_bg.jpg) no-repeat top center;
+		background-size: 120%;
+		background-position: top center;
+
+		animation-delay: 0s;
+		animation-name: example;
+		animation-duration: 10s;
+		}
+
+	@keyframes example {
+		0%   {background-size: 150%;}
+		100% {background-size: 120%;}
+		}	
+
+	.picChange{
+		position: relative;
+		width: 650px;
+		height: 450px;
+		margin: 0px auto;
+		top: 280px;
+		z-index: 1;
+	}
+	.picChange img{
+		position: absolute;
+	}
+	.whiteText{
+		position: absolute;
+		margin: 25px;
+		width: 550px;
+		height: 350px;
+		z-index: 2;
+		display: none;
+	}
+	
+	
+</style>
+</head>
+
+<body>
+<div class="all">
+	<header>
+		<section><img class="logo" src="images/logo.png"></section>
+		<nav>
+			<ul>
+				<li><a href="#">ABOUT<br>企業情報</a></li>
+				<li><a href="#">BUSINESS<br>事業内容</a></li>		
+				<li><a href="#">PROPERTY<br>物件情報</a></li>
+				<li><a href="#">OWNER’S VOICE<br>オーナー様の声</a></li>
+				<li><a href="#">RECRUIT<br>採用情報</a></li>		
+				<li><a href="#">NEWS<br>ニュース</a></li>
+				<li><a href="#"><img src="images/fb.png"></a></li>
+				<li><a href="#">CONTACT<br>お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-------------------------------header end------------------------------------->
+		<section class="picOutter">
+			<section class="picChange">
+				<section class="whiteText"><img src="images/index_text.png"></section>
+			</section>
+		</section>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<!-------------------------------picChange end------------------------------------->
+	<footer></footer>
+</div>
+</body>
+</html>

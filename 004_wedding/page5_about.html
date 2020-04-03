@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wedding</title>
+<link rel="stylesheet" href="jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+	function init(){
+		$(".icon1").hover(enterHandler1,leaveHandler1);
+		$(".icon2").hover(enterHandler2,leaveHandler2);
+		$(".icon3").hover(enterHandler3,leaveHandler3);
+		$(".special_Btn1").hover(enterHandler4,leaveHandler4);
+		$(".special_Btn2").hover(enterHandler5,leaveHandler5);
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler1(){
+		$(this).attr("src","images/index_menu_hover_02.jpg");
+	}
+	function leaveHandler1(){
+		$(this).attr("src","images/index_02.jpg");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler2(){
+		$(this).attr("src","images/index_menu_hover_03.jpg");
+	}
+	function leaveHandler2(){
+		$(this).attr("src","images/index_03.jpg");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler3(){
+		$(this).attr("src","images/index_menu_hover_04.jpg");
+	}
+	function leaveHandler3(){
+		$(this).attr("src","images/index_04.jpg");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler4(){
+		$(this).animate({"marginTop":"0px"},500);
+		$(".special_Btn1 img").attr("src","images/index_speciallBtn_hover_01.png");
+	}
+	function leaveHandler4(){
+		$(this).animate({"marginTop":"-10px"},500);
+		$(".special_Btn1 img").attr("src","images/index_speciallBtn_01.png");	
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler5(){
+		$(this).animate({"marginTop":"0px"},500);
+		$(".special_Btn2 img").attr("src","images/index_speciallBtn_hover_03.png");
+	}
+	function leaveHandler5(){
+		$(this).animate({"marginTop":"-10px"},500);
+		$(".special_Btn2 img").attr("src","images/index_speciallBtn_03.png");
+	}
+/*--------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------*/
+</script>
+<style>
+	body{margin: 0px;background-color: #E3DDCD}
+	p{margin: 0px; font-family: "微軟正黑體";color:#636363;}
+	.all{
+		width: 100%;
+	}
+	.myheader, .main, .footer_top, .footer_bottom{
+		margin: 0px auto;
+		width: 1200px;
+	}		
+	.myheader_outer{
+		background: url(images/index_01.jpg) repeat-x;
+		width: 100%;
+		height: 94px;
+		position: fixed;
+		z-index: 100;
+	}
+	.myheader{
+		height: 94px;
+	}
+	.myheader img{
+		float:left;
+	}
+	.logo ,.special_Btn1, .special_Btn2{
+		position: absolute;
+	}
+	.logo{
+		margin: 5px 0px 0px 150px;
+	}
+	.special_Btn1{
+		margin: -10px 0px 0px 830px;
+	}
+	.special_Btn2{
+		margin: -10px 0px 0px 925px;
+	}
+/*-------------------------------------------------------------------------*/
+	.main{
+		top:94px;
+		position: relative;
+	}
+	.main_top{
+		background: url(images/index_06.jpg) no-repeat;
+		height: 34px;
+	}
+	.main_center{
+		background: url(images/index_07.jpg) repeat-y;
+		height: 50px;
+	}
+	.main_bottom{
+		background: url(images/index_08.jpg) no-repeat;
+		height: 499px;
+	}
+	/*-------------------------------------------------------------------------*/
+	footer{
+		position: relative;
+		z-index: 5;
+		top:94px;
+		margin: 0px;
+		clear: both;
+		height: 146;
+	}
+	.footer_top{
+		height: 76px;
+		background: url(images/index_09.jpg) no-repeat center center;
+	}
+	.footer_bottom{
+		height: 71px;
+		background: url(images/index_10.jpg) no-repeat;
+	}
+	.footer_bottom ul{
+		width: 450px;
+		margin: 10px 0px 0px 135px;
+	}
+	.footer_bottom ul li{
+		list-style-type: none;
+	}
+	.footer_bottom ul li a{
+		font-size: 0.9em;
+		color: #686868;
+		text-decoration: none;
+		float: left;
+		display: block;
+		padding: 0px 10px;
+	}
+	.footer_bottom ul li a:hover{
+		color: #89775b;
+	}
+	.footer_bottom p{
+		margin: 0px 185px 0px 0px;
+		font-size: 0.9em;
+		color: #686868;
+		text-align: right;
+	}
+	.main_bottom img{
+		position: absolute;
+		margin: 20px 0px 0px 221px;
+	}
+</style>
+
+</head>
+
+<body>
+<div class="all">
+<header class="myheader_outer">
+	<header class="myheader">
+		<section class="logo"><a href="index.html"><img src="images/index_logo.png"/></a></section>
+		<section><img src="images/index_01.jpg"/></section>
+		<section><a href="page1.html"><img class="icon1" src="images/index_02.jpg"/></a></section>
+		<section><a href="page2.html"><img class="icon2" src="images/index_03.jpg"/></a></section>
+		<section><a href="page3.html"><img class="icon3" src="images/index_04.jpg"/></a></section>
+		<section><img src="images/index_05.jpg"/></section>
+		<section class="special_Btn1"><a href="page4_buy.html"><img src="images/index_speciallBtn_01.png"/></a></section>
+		<section class="special_Btn2"><a href="#"><img src="images/index_speciallBtn_03.png"/></a></section>
+	</header>
+</header>
+<!------------------------------------header end------------------------------------------------>
+<section class="main">
+	<section class="main_top"></section>
+	<section class="main_center"></section>
+	<section class="main_bottom">
+		<section><img src="images/page5/aboutPic.png"></section>
+	</section>
+</section>
+<!------------------------------------main end-------------------------------------------------->
+<footer>
+	<section class="footer_top"></section>
+	<section class="footer_bottom">
+		<ul>
+			<li><a href="page5_about.html">關於喜悅網</a></li>
+			<li><a href="page6_content.html">聯絡我們</a></li>
+			<li><a href="page7_QA.html">常見問題</a></li>
+			<li><a href="page8_card.html">婚禮邀請函</a></li>
+			<li><a href="page9_Cooperation.html">合作洽詢</a></li>
+		</ul>
+		<p>Copyrighted © by yuchi_rennshuu 2018, All Rights Reserved</p> 
+	</section>
+</footer>
+</div>
+</body>
+</html>

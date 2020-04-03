@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>馬兒不甜</title>
+<link rel="stylesheet" href="jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+	function init(){
+		$(".menu").click(navHandler);
+		$(".page1_bigpic_outer").delay(500).animate({"left":"0%"},800).delay(1000);
+		$(".page1_bigpic_inner").delay(1200).animate({"left":"0%"},1000).delay(3000);
+		$(".dodo").delay(1200).animate({"opacity":"1"},1000);
+		$(".page1_bigtext_outer").delay(500).animate({"left":"0px"},1000,showTextFun).delay(100).animate({"background-position":"1000px"},800);	
+	
+		for (var i=1; i<=3; i++){
+			$(".page1_bigpic_inner").append("<img src='image/bigpic_"+i+".jpg' />");
+		}
+		$(".page1_bigpic_inner img:not(:first)").fadeOut(0);//將上面的照片全部fadeOut隱藏
+	}
+	/*------------------------------------------------------------------------------------*/
+	function showTextFun(){
+		$(".page1_bigtext_inner").css("left","0px");
+	}
+	/*------------------------------------------------------------------------------------*/
+	var toggle=true;
+	function navHandler(){
+		if(toggle){			
+			$(".menu").animate({width:"300px",height:"100%"},1000);
+			$(".menu").css("background-image", "url(image/menu2.png)");
+			$(".menu").css("opacity","0.9");
+			$(".menu ul").show(0);
+			}
+		else{
+			$(".menu").animate({width:"60px",height:"100px"},1000,hideUl);
+			$(".menu").css("background-image", "url(image/menu.png)");
+			}
+		toggle = !toggle;
+		}
+	function hideUl(){
+			$(".menu ul").hide(0);
+	}
+	/*------------------------------------------------------------------------------------*/
+	setInterval(nextHandler,4000);
+	var index=0;
+	function nextHandler(event){
+		if(index<3){
+			index++;
+		}else{
+			index=0;
+		}
+		$(".page1_bigpic_inner img:eq(" +(index-1)+ ")").fadeIn(1500);
+		$(".page1_bigpic_inner img:gt(" +(index-1)+ ")").fadeOut(1500);
+		$(".dodo img").attr("src","image/dodo.png");
+		$(".dodo img:eq("+(index-1)+")").attr("src","image/dodo_select.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+</script>
+
+<style>
+	body{margin:0 auto;}
+	p{margin:0px; font-family: "微軟正黑體";}
+	.all_outer{
+		margin: 0 auto;
+		width:100%;
+		height:100%;
+	}
+	.header{
+		margin: 0px;
+		height:100px;
+		width: 100%;
+		background-color:#fff;
+		position: fixed;
+		z-index: 1000;
+		opacity:0.8; 
+		min-width: 400px;
+		}
+	.logo{
+		width: 100px;
+		position: relative;
+		top:10px;
+		left: 20px;
+		float:left;
+		}
+	.header_menu{
+		margin-top: 70px;
+		margin-right: 80px;
+	}
+	.header_menu ul{
+		margin: 0;
+	}
+	.header_menu ul li{
+		list-style-type: none;
+		float:right;
+	}
+	.header_menu ul li a{
+		font: 500 1em "微軟正黑體","josefin-sans", Helvetica, "sans-serif";
+		text-decoration: none;
+		padding: 0px 10px;
+		color:#7D7D7D;
+	}
+	.header_menu ul li a:hover{
+		color:#00F0B8;
+	}
+	.icon{
+		height: 20px;
+	}
+	.menu{		
+		background: no-repeat top right;
+		background-color:#00F0B8;
+		background-image: url(image/menu.png);
+		position: fixed;
+		top:0px;
+		right:0px;
+		width:60px;
+		height: 100px;
+		opacity:1;
+		}
+	.menu ul{
+		padding: 0px;
+		margin: 60% auto;
+		width: 100%;
+		display: none;
+	}
+	.menu ul li{
+		list-style-type: none;
+		text-align: center;
+	}
+	.menu ul li a{
+		padding: 15px;
+		text-decoration: none;
+		color: #565656 ;
+		font: 500 1.1em/3.5em "微軟正黑體","josefin-sans", Helvetica, "sans-serif";
+		letter-spacing: 5px;
+	}
+	.menu ul li a img{
+		height: 20px;
+	}
+	.menu ul li:last-child{
+		padding-top: 250px;
+	}
+	/*------------------------header end-----------------------------*/
+	.page1_main{
+		min-width: 1200px;
+		min-height: 780px;
+		position: relative;
+	}
+	.page1_bigpic_outer{
+		position: relative;
+		height: 800px;
+		width:70%;
+		float:right;
+		background-color: #7d7d7d;
+		top:100px;
+		left: 100%;
+	}
+	.page1_bigpic_inner{
+		position: relative;
+		height: 800px;
+		width:70%;
+		float:right;
+		left: 100%;
+		top:-700px;
+	}
+	.page1_bigpic_inner img{
+		position: absolute;
+		top:0px;
+		height: 800px;
+	}
+	.page1_bigtext_outer{
+		position: relative;
+		height: 450px;
+		width:1000px;
+		float:left;
+		/*overflow: hidden;
+		background-color: #00F0B8;*/
+		background-image: url(image/bg_color.jpg);
+		background-repeat: no-repeat;
+		top:-1300px;
+		left:-1000px;
+	}
+	.page1_bigtext_inner{
+		position: absolute;
+		height: 350px;
+		width:1000px;
+		left:-3000px;
+		top:300px;
+	}
+	.page1_bigtext_inner h1, .page1_bigtext_inner h2, .page1_bigtext_inner p{
+		margin: 0px 0px 0px 150px;
+		font-family:"微軟正黑體", "josefin-sans", Helvetica, "sans-serif";
+		color:#00F0B8;/*#00F0B8 綠色*/
+	}
+	.page1_bigtext_inner h1{
+		padding-top:20px; 
+		font-family: "josefin-sans", Helvetica, "sans-serif";
+		font: 100;
+		font-size: 110px;
+		letter-spacing: 30px;
+		line-height: 110px;
+	}
+	.page1_bigtext_inner h2{
+		font-size: 25px;
+		line-height: 25px;
+		letter-spacing: 10px;
+	}
+	.page1_bigtext_inner p{
+		padding-top: 30px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.dodo{
+		position: absolute;
+		width: 130px;
+		height: 25px;
+		top: 750px;
+		margin-left: 48%;
+		/*border: 5px solid red;*/
+		z-index: 5;		
+		opacity: 0;
+		display: block;
+	}
+	.dodo img{
+		width: 25px;
+		height: 25px;
+	}
+/*------------------------page1_main end-----------------------------*/
+	.page2_about{
+		width: 100%;
+		height:800px;
+		clear: both;
+		position: relative;
+		top:-1000px;
+		background-color: #00F0B8;
+	}
+	.page2_about_inner{
+		margin: 0px auto;
+		position: relative;
+		top:50px;
+		width: 80%;
+		height: 700px;
+		background-color: white;
+		opacity:0.9;
+	}
+	.page2_about_header ul{
+		width:120px;
+		margin: 0px auto;
+		padding: 70px 0px 10px 0px;
+	}
+	.page2_about_header ul li{
+		list-style-type: none;
+		text-align: center;
+		line-height:30px;
+	}
+	.page2_about_header ul li a{
+		text-decoration: none;
+		color: #7d7d7d; /*#7d7d7d  主要灰*/
+		font-size: 1em;
+		font-family: "微軟正黑體";
+		font-weight: 800;
+	}
+	.page2_about_text p{
+		font-size: 0.8em;
+		line-height: 20px;
+		text-align: center;
+		letter-spacing: 1px;
+		padding: 0.3em;
+		color: #565656;/*#565656  深灰*/
+		
+	}
+	.page2_about_pic{
+		margin: 30px auto;
+		width: 560px;
+	}
+	.about_pic{	
+		width: 100px;
+		height: 100px;
+		margin: 0px 5px;
+		float: left;
+		border: 1px solid #A4A4A4;  /*#A4A4A4  淺灰*/
+	}
+	.about_border{
+		border-bottom: 1px solid #00F0B8;
+	}
+/*------------------------page2_about end-----------------------------*/
+</style>
+</head>
+<body>
+<div class="all_outer">
+<header class="header">
+	<img class="logo" src="image/logo.png">
+	<section class="header_menu">
+		<ul>
+			<li><a href="#"><img class="icon iconIg" src="image/ig.png" ></a></li>
+			<li><a href="#"><img class="icon iconFb" src="image/fb.png"></a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">about</a></li>
+		</ul>
+	</section>
+<nav class="menu">
+	<ul>
+		<li><a href="#">about</a></li>
+		<li><a href="#">近期作品</a></li>
+		<li><a href="#">生活日誌</a></li>
+		<li><a href="#">食譜分享</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#"><img class="menu_icon2" src="image/ig.png"></a><a href="#"><img class="menu_icon2" src="image/fb.png"></a></li>
+	</ul>
+</nav>
+</header>
+<!-----------------------------header end------------------------------->
+<section class="page1_main">
+	
+	<section class="page1_bigpic_outer">
+		<section class="dodo">
+			<img src="image/dodo_select.png" />
+			<img src="image/dodo.png" />
+			<img src="image/dodo.png" />
+			<img src="image/dodo.png" />
+		</section>
+	</section>
+	<section class="page1_bigpic_inner">
+		<img src="image/bigpic_0.jpg" />
+	</section>
+	
+	<section class="page1_bigtext_outer"></section>
+	<section class="page1_bigtext_inner">
+		<h1>ONE GIFT,<br>FOR YOU</h1>
+		<h2>歡慶聖誕節，送個小點心給最愛的人吧!</h2>
+		<p>倒數2017邁向2018的前夕，<br>最令人們感到幸福溫馨的節慶聖誕節終於要來了。<br>製作甜點最開心的地方不是稱能吃到，<br>而是送給對方時，對方幸福的吃下甜點露出的微笑。<br>無形中成為製作下去的動力。<br>願大家都能一直幸福快樂。</p>
+	</section>
+	
+</section>
+<!-----------------------------page1_main end------------------------------->
+<section class="page2_about">
+	<section class="page2_about_inner">
+		<section class="page2_about_header">
+			<ul>
+				<li class="about_border"><a href="#">About</a></li>
+				<li><a href="#">關於馬兒不甜</a></li>
+			</ul>
+		</section>
+		<section class="page2_about_text">
+			<p>曾經家裡有一台非常小的贈品烤箱，只能烤麵包及非常小的東西無法控制溫度的基本款，<br>
+			有天心血來潮想給他賦予特別任務...於是我烤出了人生中第一塊餅乾。</p>
+			<p>只用基本的蛋、麵粉、奶油、糖，身邊人驚呼居然能用如此簡陋器具做出好吃的餅乾<br>
+			就這樣漸漸增加了興趣及研究精神，開始掉進甜點的大坑裡(笑)</p>
+			<p>有人問我是因為喜歡吃甜食而開始動手做甜點的嗎?我一開始我不知道該怎麼回答，<br>
+			直到有一年家中只剩我一個人看家時，我才發現我不是因為想吃而做，<br>
+			而是享受著研究食譜與製作過程，以及最後完成甜點後的成就感， <br>
+			當有人吃到我做的甜點而說出好吃時，那種成就感讓我想繼續嘗試下去!</p>
+			<p>小馬是我從國中時期因為老師叫錯名字的緣故而產生的綽號，<br>
+			再加上我不喜歡太甜的甜點，所以製作的甜點都不會太甜，<br>
+			於是朋友們開始幫我取我出產甜點的小店名，「馬兒不甜」就此誕生!</p>
+			<p>有時馬兒不甜成品遇到了嗜甜者會得到一些評價是感覺不夠甜，<br>
+			為了能滿足嗜甜者，俗稱螞蟻人的朋友XD<br>
+			期望未來也可以研發一些馬兒好甜的成品給他們嘗試!</p>
+			<p>最後再次感謝喜愛我甜點的朋友幫我取可愛的店名，以及幫我設計店形象初稿的粉絲朋友XD</p>
+		</section>
+		<section class="page2_about_pic">
+			<section class="about_pic"><img src="image/about_1.JPG"></section>
+			<section class="about_pic"><img src="image/about_2.JPG"></section>
+			<section class="about_pic"><img src="image/about_3.JPG"></section>
+			<section class="about_pic"><img src="image/about_4.JPG"></section>
+			<section class="about_pic"><img src="image/about_5.JPG"></section>
+		</section>
+	</section>
+</section>
+<!-----------------------------page2_about end------------------------------->
+
+
+
+
+
+</div>
+</body>
+</html>

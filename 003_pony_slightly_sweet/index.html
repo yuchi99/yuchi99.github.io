@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>馬兒不甜</title>
+<link rel="stylesheet" href="assets/jquery-ui-1.12.1.text/jquery-ui.css">
+<link rel="stylesheet" href="assets/css/myStyle.css">
+
+<script src="assets/jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="assets/jquery-ui-1.12.1.text/jquery-ui.js"></script>
+
+
+<script>
+	$(document).ready(init);
+    function init(){
+		$(".menuBtn").click(navHandler);
+		$(".bigpic_up").delay(800).animate({"right":"0%"},500).delay(500).animate({"right":"-75%"},500);
+		$(".bigpic_down").delay(800).animate({"right":"0%"},500);
+		$(".bigtext_up").delay(800).animate({"left":"0px"},500);
+		$(".bigtext_down").delay(300).animate({"left":"0px"},500).delay(900).animate({"left":"-1000px"},500);
+		$("#iconIg").hover(enterHandler1,leaveHandler1);
+		$("#iconFb").hover(enterHandler2,leaveHandler2);
+	}
+    /*----------------------------------------------------*/
+    var toggle=true;
+    function navHandler(){
+        if(toggle){			
+			$(".menuBtn").css("background-image", "url(image/menu2.png)");
+			$(".menuRight ul").fadeIn(500);
+			}
+		else{
+			$(".menuRight ul").fadeOut(500);
+			$(".menuBtn").css("background-image", "url(image/menu.png)");
+			}
+		toggle = !toggle;
+		}
+	/*----------------------------------------------------*/
+	function enterHandler1(){
+		$(this).attr("src","image/ig_hover.png");
+	}
+	function leaveHandler1(){
+		$(this).attr("src","image/ig.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+	function enterHandler2(){
+		$(this).attr("src","image/fb_hover.png");
+	}
+	function leaveHandler2(){
+		$(this).attr("src","image/fb.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+</script>
+</head>
+<body>
+	<div class="all">
+		<header>
+			<section class="logo"><a href="index.html"><img src="image/logo.png"></a></section>
+			<section class="bigMenu">
+                <ul class="menuTop">
+                    <li><a href="page2About.html">about</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><img class="icon" id="iconIg" src="image/ig.png" ></a></li>
+                    <li><a href="#"><img class="icon" id="iconFb" src="image/fb.png"></a></li>
+                </ul>
+                <nav class="menuRight">
+                    <section class="menuBtn"></section>
+                    <ul>
+                        <li><a href="page2About.html">about</a></li>
+                        <li><a href="#">近期作品</a></li>
+                        <li><a href="#">生活日誌</a></li>
+                        <li><a href="#">食譜分享</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#"><img class="icon igIcon" src="image/ig_w.png" /></a><a href="#"><img class="icon fbIcon" src="image/fb_w.png" /></a></li>
+                    </ul>
+                </nav>
+            </section>
+		</header>
+        <!-----------------------------header end------------------------------->
+        <section class="main">
+            <section class="bigpic_down">
+                <!--section class="dodo">
+                    <img src="image/dodo_select.png" />
+                    <img src="image/dodo.png" />
+                    <img src="image/dodo.png" />
+                    <img src="image/dodo.png" />
+                </section-->
+            </section>
+            <section class="bigpic_up"></section>
+            <section class="bigtext_up">
+                <section class="bigtext_down"></section>
+
+                <h1>ONE GIFT,<br>FOR YOU</h1>
+                <h2>歡慶聖誕節，送個小點心給最愛的人吧!</h2>
+                <p>倒數2017邁向2018的前夕，<br>最令人們感到幸福溫馨的節慶聖誕節終於要來了。<br>製作甜點最開心的地方不是稱能吃到，<br>而是送給對方時，對方幸福的吃下甜點露出的微笑。<br>無形中成為製作下去的動力。<br>願大家都能一直幸福快樂。</p>
+            </section>
+        </section>
+<!-----------------------------page1_main end------------------------------->
+	</div>
+</body>
+</html>

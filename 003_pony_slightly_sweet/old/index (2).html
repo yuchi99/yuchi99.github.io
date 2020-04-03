@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>馬兒不甜</title>
+<link rel="stylesheet" href="jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+	function init(){
+		$(".menu").click(navHandler);
+		$(".page1_bigpic_outer").delay(500).animate({"left":"0%"},800).delay(1000);
+		$(".page1_bigpic_inner").delay(1200).animate({"left":"0%"},1000).delay(3000);
+		$(".dodo").delay(1200).animate({"opacity":"1"},1000);
+		$(".page1_bigtext_outer").delay(500).animate({"left":"0px"},1000,showTextFun).delay(100).animate({"background-position":"1000px"},800);	
+		$("#iconIg").hover(enterHandler1,leaveHandler1);
+		$("#iconFb").hover(enterHandler2,leaveHandler2);
+		
+		for (var i=1; i<=3; i++){
+			$(".page1_bigpic_inner").append("<img src='image/bigpic_"+i+".jpg' />");
+		}
+		$(".page1_bigpic_inner img:not(:first)").fadeOut(0);//將上面的照片全部fadeOut隱藏
+	}
+	/*------------------------------------------------------------------------------------*/
+	function showTextFun(){
+		$(".page1_bigtext_inner").css("left","0px");
+	}
+	/*------------------------------------------------------------------------------------*/
+	var toggle=true;
+	function navHandler(){
+		if(toggle){			
+			$(".menu").animate({width:"300px",height:"100%"},1000);
+			$(".menu").css("background-image", "url(image/menu2.png)");
+			$(".menu").css("opacity","0.9");
+			$(".menu ul").show(0);
+			}
+		else{
+			$(".menu").animate({width:"60px",height:"100px"},1000,hideUl);
+			$(".menu").css("background-image", "url(image/menu.png)");
+			}
+		toggle = !toggle;
+		}
+	function hideUl(){
+			$(".menu ul").hide(0);
+	}
+	/*------------------------------------------------------------------------------------*/
+	setInterval(nextHandler,4000);
+	var index=0;
+	function nextHandler(event){
+		if(index<3){
+			index++;
+		}else{
+			index=0;
+		}
+		$(".page1_bigpic_inner img:eq(" +(index-1)+ ")").fadeIn(1500);
+		$(".page1_bigpic_inner img:gt(" +(index-1)+ ")").fadeOut(1500);
+		$(".dodo img").attr("src","image/dodo.png");
+		$(".dodo img:eq("+(index-1)+")").attr("src","image/dodo_select.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+	function enterHandler1(){
+		$(this).attr("src","image/ig_hover.png");
+	}
+	function leaveHandler1(){
+		$(this).attr("src","image/ig.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+	function enterHandler2(){
+		$(this).attr("src","image/fb_hover.png");
+	}
+	function leaveHandler2(){
+		$(this).attr("src","image/fb.png");
+	}
+	/*------------------------------------------------------------------------------------*/
+</script>
+
+<style>
+	body{margin:0 auto;}
+	p{margin:0px; font-family: "微軟正黑體";}
+	.all_outer{
+		margin: 0 auto;
+		width:100%;
+		height:100%;
+	}
+	.header{
+		margin: 0px;
+		height:100px;
+		width: 100%;
+		background-color:#fff;
+		position: fixed;
+		z-index: 1000;
+		opacity:0.8; 
+		min-width: 400px;
+		}
+	.logo{
+		width: 100px;
+		position: relative;
+		top:10px;
+		left: 20px;
+		float:left;
+		}
+	.header_menu{
+		margin-top: 70px;
+		margin-right: 80px;
+	}
+	.header_menu ul{
+		margin: 0;
+	}
+	.header_menu ul li{
+		list-style-type: none;
+		float:right;
+	}
+	.header_menu ul li a{
+		font: 500 1em "微軟正黑體","josefin-sans", Helvetica, "sans-serif";
+		text-decoration: none;
+		padding: 0px 10px;
+		color:#7D7D7D;
+	}
+	.header_menu ul li a:hover{
+		color:#00F0B8;
+	}
+	.icon{
+		height: 20px;
+	}
+	.menu{		
+		background: no-repeat top right;
+		background-color:#00F0B8;
+		background-image: url(image/menu.png);
+		position: fixed;
+		top:0px;
+		right:0px;
+		width:60px;
+		height: 100px;
+		opacity:1;
+		}
+	.menu ul{
+		padding: 0px;
+		margin: 60% auto;
+		width: 100%;
+		display: none;
+	}
+	.menu ul li{
+		list-style-type: none;
+		text-align: center;
+	}
+	.menu ul li a{
+		padding: 15px;
+		text-decoration: none;
+		color: #565656 ;
+		font: 500 1.1em/3.5em "微軟正黑體","josefin-sans", Helvetica, "sans-serif";
+		letter-spacing: 5px;
+	}
+	.menu ul li a img{
+		height: 20px;
+	}
+	.menu ul li:last-child{
+		padding-top: 250px;
+	}
+	/*------------------------header end-----------------------------*/
+	.page1_main{
+		min-width: 1200px;
+		min-height: 780px;
+		position: relative;
+	}
+	.page1_bigpic_outer{
+		position: relative;
+		height: 800px;
+		width:70%;
+		float:right;
+		background-color: #7d7d7d;
+		top:100px;
+		left: 100%;
+	}
+	.page1_bigpic_inner{
+		position: relative;
+		height: 800px;
+		width:70%;
+		float:right;
+		left: 100%;
+		top:-700px;
+	}
+	.page1_bigpic_inner img{
+		position: absolute;
+		top:0px;
+		height: 800px;
+	}
+	.page1_bigtext_outer{
+		position: relative;
+		height: 450px;
+		width:1000px;
+		float:left;
+		/*overflow: hidden;
+		background-color: #00F0B8;*/
+		background-image: url(image/bg_color.jpg);
+		background-repeat: no-repeat;
+		top:-1300px;
+		left:-1000px;
+	}
+	.page1_bigtext_inner{
+		position: absolute;
+		height: 350px;
+		width:1000px;
+		left:-3000px;
+		top:300px;
+	}
+	.page1_bigtext_inner h1, .page1_bigtext_inner h2, .page1_bigtext_inner p{
+		margin: 0px 0px 0px 150px;
+		font-family:"微軟正黑體", "josefin-sans", Helvetica, "sans-serif";
+		color:#00F0B8;/*#00F0B8 綠色*/
+	}
+	.page1_bigtext_inner h1{
+		padding-top:20px; 
+		font-family: "josefin-sans", Helvetica, "sans-serif";
+		font: 100;
+		font-size: 110px;
+		letter-spacing: 30px;
+		line-height: 110px;
+	}
+	.page1_bigtext_inner h2{
+		font-size: 25px;
+		line-height: 25px;
+		letter-spacing: 10px;
+	}
+	.page1_bigtext_inner p{
+		padding-top: 30px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.dodo{
+		position: absolute;
+		width: 130px;
+		height: 25px;
+		top: 750px;
+		margin-left: 48%;
+		/*border: 5px solid red;*/
+		z-index: 5;		
+		opacity: 0;
+		display: block;
+	}
+	.dodo img{
+		width: 25px;
+		height: 25px;
+	}
+/*------------------------page1_main end-----------------------------*/
+
+</style>
+</head>
+<body>
+<div class="all_outer">
+<header class="header">
+	<img class="logo" src="image/logo.png">
+	<section class="header_menu">
+		<ul>
+			<li><a href="#"><img class="icon" id="iconIg" src="image/ig.png" ></a></li>
+			<li><a href="#"><img class="icon" id="iconFb" src="image/fb.png"></a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">about</a></li>
+		</ul>
+	</section>
+<nav class="menu">
+	<ul>
+		<li><a href="#">about</a></li>
+		<li><a href="#">近期作品</a></li>
+		<li><a href="#">生活日誌</a></li>
+		<li><a href="#">食譜分享</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#"><img class="menu_icon2 igIcon" src="image/ig.png" /></a><a href="#"><img class="menu_icon2 fbIcon" src="image/fb.png" /></a></li>
+	</ul>
+</nav>
+</header>
+<!-----------------------------header end------------------------------->
+<section class="page1_main">
+	
+	<section class="page1_bigpic_outer">
+		<section class="dodo">
+			<img src="image/dodo_select.png" />
+			<img src="image/dodo.png" />
+			<img src="image/dodo.png" />
+			<img src="image/dodo.png" />
+		</section>
+	</section>
+	<section class="page1_bigpic_inner">
+		<img src="image/bigpic_0.jpg" />
+	</section>
+	
+	<section class="page1_bigtext_outer"></section>
+	<section class="page1_bigtext_inner">
+		<h1>ONE GIFT,<br>FOR YOU</h1>
+		<h2>歡慶聖誕節，送個小點心給最愛的人吧!</h2>
+		<p>倒數2017邁向2018的前夕，<br>最令人們感到幸福溫馨的節慶聖誕節終於要來了。<br>製作甜點最開心的地方不是稱能吃到，<br>而是送給對方時，對方幸福的吃下甜點露出的微笑。<br>無形中成為製作下去的動力。<br>願大家都能一直幸福快樂。</p>
+	</section>
+	
+</section>
+<!-----------------------------page1_main end------------------------------->
+
+</div>
+</body>
+</html>

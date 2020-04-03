@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wedding</title>
+<link rel="stylesheet" href="jquery-ui-1.12.1.text/jquery-ui.css">
+<script src="jquery-ui-1.12.1.text/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.text/jquery-ui.js"></script>
+<script>
+	$(document).ready(init);
+	function init(){
+		$(".icon2").hover(enterHandler2,leaveHandler2);
+		$(".icon3").hover(enterHandler3,leaveHandler3);
+		$(".special_Btn1").hover(enterHandler4,leaveHandler4);
+		$(".special_Btn2").hover(enterHandler5,leaveHandler5);
+		$(".startTxt, .startBtn").hover(enterHandler6,leaveHandler6);
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler2(){
+		$(this).attr("src","images/index_menu_hover_03.jpg");
+	}
+	function leaveHandler2(){
+		$(this).attr("src","images/index_03.jpg");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler3(){
+		$(this).attr("src","images/index_menu_hover_04.jpg");
+	}
+	function leaveHandler3(){
+		$(this).attr("src","images/index_04.jpg");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler4(){
+		$(this).animate({"marginTop":"0px"},500);
+		$(".special_Btn1 img").attr("src","images/index_speciallBtn_hover_01.png");
+	}
+	function leaveHandler4(){
+		$(this).animate({"marginTop":"-10px"},500);
+		$(".special_Btn1 img").attr("src","images/index_speciallBtn_01.png");	
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler5(){
+		$(this).animate({"marginTop":"0px"},500);
+		$(".special_Btn2 img").attr("src","images/index_speciallBtn_hover_03.png");
+	}
+	function leaveHandler5(){
+		$(this).animate({"marginTop":"-10px"},500);
+		$(".special_Btn2 img").attr("src","images/index_speciallBtn_03.png");
+	}
+/*--------------------------------------------------------------------------------*/
+	function enterHandler6(){
+		$(".startBtn").attr("src","images/page1/startBtnHover.png");
+	}
+	function leaveHandler6(){
+		$(".startBtn").attr("src","images/page1/startBtn.png");
+	}
+/*--------------------------------------------------------------------------------*/
+</script>
+<style>
+	body{margin: 0px;background-color: #E3DDCD}
+	p, h3, ul{margin: 0px; font-family: "微軟正黑體";color:#636363;}
+	.all{
+		width: 100%;
+	}
+	.myheader, .main, .footer_top, .footer_bottom{
+		margin: 0px auto;
+		width: 1200px;
+	}		
+	.myheader_outer{
+		background: url(images/index_01.jpg) repeat-x;
+		width: 100%;
+		height: 94px;
+		position: fixed;
+		z-index: 100;
+	}
+	.myheader{
+		height: 94px;
+	}
+	.myheader img{
+		float:left;
+	}
+	.logo ,.special_Btn1, .special_Btn2{
+		position: absolute;
+	}
+	.logo{
+		margin: 5px 0px 0px 150px;
+	}
+	.special_Btn1{
+		margin: -10px 0px 0px 830px;
+	}
+	.special_Btn2{
+		margin: -10px 0px 0px 925px;
+	}
+/*-------------------------------------------------------------------------*/
+	.main{
+		top:94px;
+		position: relative;
+	}
+	.main_top{
+		background: url(images/index_06.jpg) no-repeat;
+		height: 34px;
+	}
+	.main_center{
+		background: url(images/index_07.jpg) repeat-y;
+		height: 50px;
+	}
+	.main_bottom{
+		background: url(images/index_08.jpg) no-repeat;
+		height: 499px;
+	}
+	/*-------------------------------------------------------------------------*/
+	footer{
+		position: relative;
+		z-index: 5;
+		top:94px;
+		margin: 0px;
+		clear: both;
+		height: 146;
+	}
+	.footer_top{
+		height: 76px;
+		background: url(images/index_09.jpg) no-repeat center center;
+	}
+	.footer_bottom{
+		height: 71px;
+		background: url(images/index_10.jpg) no-repeat;
+	}
+	.footer_bottom ul{
+		width: 450px;
+		margin: 10px 0px 0px 135px;
+	}
+	.footer_bottom ul li{
+		list-style-type: none;
+	}
+	.footer_bottom ul li a{
+		font-size: 0.9em;
+		color: #686868;
+		text-decoration: none;
+		float: left;
+		display: block;
+		padding: 0px 10px;
+	}
+	.footer_bottom ul li a:hover{
+		color: #89775b;
+	}
+	.footer_bottom p{
+		margin: 0px 185px 0px 0px;
+		font-size: 0.9em;
+		color: #686868;
+		text-align: right;
+	}
+/*------------------------------版型結束----------------------------------*/
+	.main_top{
+		display: flex;
+		justify-content: space-between;
+	}
+	.main_top{
+		display: flex;
+		justify-content: space-between;
+	}
+	.main_bottom{
+		display: flex;
+	}
+	.mainL{
+		width: 435px;
+		height: 430px;
+		background: url(images/page1/leftSquare.png) no-repeat center center;
+		margin: -20px 0px 0px 110px;
+	}
+	.mainL h3{
+		padding-top: 115px; 
+		margin: 0px 25px;
+		line-height: 2em;
+	}
+	.mainL p{
+		font-size: 0.9em;
+		margin: 0px 25px;
+		text-align: justify;
+		line-height: 1.5em;
+	}
+	.mainR{
+		width: 437px;
+		height: 367px;
+		background: url(images/page1/bigHard.png) no-repeat center center;
+		margin: 50px 0px 0px 40px;
+	}
+	.mainR ul{
+		padding: 70px 40px 0px 50px;
+	}
+	.mainR li{
+		padding: 5px 0px 0px 20px;
+		font-size: 0.9em;
+		list-style-type: none;
+		text-indent: -21px;
+	}
+	.mainR img{
+		padding: 0px 5px 0px 0px;
+		}
+	.getStart{
+		position: relative;
+	}
+	.startBg, .startTxt, .startBtn{
+		position: absolute;
+	}
+	.startBg{
+		margin: 160px 0px 0px -100px;
+	}
+	.startTxt{
+		margin: 335px 0px 0px -80px;
+	}
+	.startBtn{
+		margin: 393px 0px 0px -45px;
+	}
+</style>
+
+</head>
+
+<body>
+<div class="all">
+<header class="myheader_outer">
+	<header class="myheader">
+		<section class="logo"><a href="index.html"><img src="images/index_logo.png"/></a></section>
+		<section><img src="images/index_01.jpg"/></section>
+		<section><img class="icon1" src="images/index_menu_hover_02.jpg"/></section>
+		<section><a href="page2.html"><img class="icon2" src="images/index_03.jpg"/></a></section>
+		<section><a href="page3.html"><img class="icon3" src="images/index_04.jpg"/></a></section>
+		<section><img src="images/index_05.jpg"/></section>
+		<section class="special_Btn1"><a href="page4_buy.html"><img src="images/index_speciallBtn_01.png"/></a></section>
+		<section class="special_Btn2"><a href="#"><img src="images/index_speciallBtn_03.png"/></a></section>
+	</header>
+</header>
+<!------------------------------------header end------------------------------------------------>
+<section class="main">
+	<section class="main_top">
+		<section><img src="images/page1/bgL.png"></section>
+		<section><img src="images/page1/bgR.png"></section>
+	</section>
+	<section class="main_center"></section>
+	<section class="main_bottom">
+		<article class="mainL">
+			<header><h3>一場漫步雲端的數位婚禮</h3></header>
+			<p>囍悅網所提供的產品為一套，使用行動設備即可於雲端瀏覽婚紗照
+			＆婚禮相關訊息的數位服務。此服務可使親友們收到喜帖後，使用
+			手機、平板等設備掃描喜帖上的QR Code或是搭配囍悅網提供的專
+			屬QR說明卡，即可立刻瀏覽您們的婚紗照、影片，同時可於Google
+			地圖中了解婚宴舉辦的地點，即時互動不怕迷路。
+			另一方面親友們來到婚宴會場後，無需與眾人搶看一本厚重的婚紗
+			相本，可於婚禮接待處或宴客餐桌之桌卡放置QR Code，提供親友們
+			線上瀏覽婚紗照，除了方便瀏覽外，同時也打發了等待開席的漫長
+			時間，亦無需擔心婚禮謝卡可能不足的問題。
+			對於不克參加婚禮的親友，亦能以行動通訊軟體傳送網址予對方，
+			讓他們一同來分享您們的喜悅～。</p>
+		</article>
+		<article class="mainR">
+			<ul>
+				<li><img src="images/page1/hard.png">收到喜帖後，可即時瀏覽婚紗照及婚禮相關訊息。</li>
+				<li><img src="images/page1/hard.png">親友可以於線上瀏覽婚紗照，打發等待開席的漫長時間。</li>
+				<li><img src="images/page1/hard.png">親友拿到婚禮謝卡後保留不易，既可惜又不環保。</li>
+				<li><img src="images/page1/hard.png">分享婚紗照無需攜帶厚重的相本。</li>
+				<li><img src="images/page1/hard.png">讓不克參加婚禮之親友，亦能分享您們的喜悅。</li>
+			</ul>
+		</article>
+		<section class="getStart">
+			<img class="startBg" src="images/page1/startBg.png">
+			<a href="page2.html"><img class="startTxt" src="images/page1/startTxt.png"></a>
+			<a href="page2.html"><img class="startBtn" src="images/page1/startBtn.png"></a>
+		</section>
+	</section>
+</section>
+<!------------------------------------main end-------------------------------------------------->
+<footer>
+	<section class="footer_top"></section>
+	<section class="footer_bottom">
+		<ul>
+			<li><a href="page5_about.html">關於喜悅網</a></li>
+			<li><a href="page6_content.html">聯絡我們</a></li>
+			<li><a href="page7_QA.html">常見問題</a></li>
+			<li><a href="page8_card.html">婚禮邀請函</a></li>
+			<li><a href="page9_Cooperation.html">合作洽詢</a></li>
+		</ul>
+		<p>Copyrighted © by yuchi_rennshuu 2018, All Rights Reserved</p> 
+	</section>
+</footer>
+</div>
+</body>
+</html>
