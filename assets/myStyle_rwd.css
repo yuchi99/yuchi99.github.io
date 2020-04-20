@@ -166,8 +166,13 @@ footer{
 }
 
 @media (max-width: 576px){
+	.headerBg{
+		overflow: hidden;
+		width: 100%;
+	}
 	.headerBg img{
 		width: 150%;
+		max-height: 100%;
 	}
 	section{
 		padding: 40px 0;
