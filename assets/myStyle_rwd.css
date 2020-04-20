@@ -65,6 +65,7 @@ section{
 }
 .headerBg img{
 	width: 100%;
+	height: auto;
 }
 .page0_bg img{
 	opacity: 0.7;
