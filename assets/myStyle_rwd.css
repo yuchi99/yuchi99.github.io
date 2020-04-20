@@ -63,11 +63,6 @@ section{
 	left: 50%;
 	transform: translateX(-50%);
 }
-.headerBg{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
 .headerBg img{
 	width: 100%;
 }
