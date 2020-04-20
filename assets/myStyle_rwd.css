@@ -66,7 +66,7 @@ section{
 .headerBg{
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	overflow-x: hidden;
 }
 .headerBg img{
 	width: 100%;
