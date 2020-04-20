@@ -167,9 +167,6 @@ footer{
 }
 
 @media (max-width: 576px){
-	.headerBg img{
-		width: 150%;
-	}
 	section{
 		padding: 40px 0;
 	}
